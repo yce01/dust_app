@@ -48,6 +48,12 @@ class _DustAppState extends State<DustApp> {
     _dustDTO = getData();
   }
 
+  _refresh(){
+    setState(() {
+      _dustDTO = getData();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -174,7 +180,7 @@ class _DustAppState extends State<DustApp> {
                           ),
                           Text(
                             text(dto),
-                            style: const TextStyle(fontSize: 40),
+                            style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                           )
                         ],
                       ),
@@ -184,6 +190,10 @@ class _DustAppState extends State<DustApp> {
                   }
                   return const CircularProgressIndicator();
                 }),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: _refresh,
+            child: Icon(Icons.refresh),
           ),
         ));
   }
