@@ -95,45 +95,45 @@ class _DustAppState extends State<DustApp> {
                       }
                     }
                     String text(ItemDTO dto) {
-                      if (dto.value! < 5) {
+                      if (dto.value! <25) {
                         return '아주 좋음';
-                      } else if (dto.value! < 10) {
+                      } else if (dto.value! < 50) {
                         return '좋음';
-                      } else if (dto.value! < 15) {
+                      } else if (dto.value! < 60) {
                         return '보통';
-                      } else if (dto.value! < 20) {
+                      } else if (dto.value! < 100) {
                         return '나쁨';
-                      } else if (dto.value! < 30) {
+                      } else if (dto.value! < 130) {
                         return '매우 나쁨';
                       } else
                         return '최악';
                     }
 
                     String icon(ItemDTO dto) {
-                      if (dto.value! < 5) {
+                      if (dto.value! < 25) {
                         return 'assets/happy.png';
-                      } else if (dto.value! < 10) {
+                      } else if (dto.value! < 50) {
                         return 'assets/smile.png';
-                      } else if (dto.value! < 15) {
+                      } else if (dto.value! < 60) {
                         return 'assets/normal.png';
-                      } else if (dto.value! < 20) {
+                      } else if (dto.value! < 100) {
                         return 'assets/bad.png';
-                      } else if (dto.value! < 30) {
+                      } else if (dto.value! < 130) {
                         return 'assets/very_bad.png';
                       } else
                         return 'assets/worst.png';
                     }
 
                     Color backgroundColor(ItemDTO dto) {
-                      if (dto.value! < 5) {
+                      if (dto.value! < 25) {
                         return Colors.tealAccent;
-                      } else if (dto.value! < 10) {
+                      } else if (dto.value! < 50) {
                         return Colors.lightGreenAccent;
-                      } else if (dto.value! < 15) {
+                      } else if (dto.value! < 60) {
                         return Colors.white70;
-                      } else if (dto.value! < 20) {
+                      } else if (dto.value! < 100) {
                         return Colors.yellowAccent;
-                      } else if (dto.value! < 30) {
+                      } else if (dto.value! < 130) {
                         return Colors.orangeAccent;
                       } else
                         return Colors.redAccent;
